@@ -13,5 +13,5 @@
 - Evaluating noise performance
 - Implementing optical isolation and battery power
 ### Resources:
-[1]: https://github.com/macaba/ad4630-pico-breakout
-[2]: https://github.com/macaba/Nuts/blob/main/images/NSD.png
+- https://github.com/macaba/ad4630-pico-breakout
+- https://github.com/macaba/Nuts/blob/main/images/NSD.png
