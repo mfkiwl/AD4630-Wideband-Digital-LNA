@@ -12,6 +12,7 @@
 - Sample storage and processing
 - Evaluating noise performance
 - Implementing optical isolation and battery power
+- Input analog circuitry to accomodate differential output and AC coupled input
 ### Resources:
 - https://github.com/macaba/ad4630-pico-breakout
 - https://github.com/macaba/Nuts/blob/main/images/NSD.png
