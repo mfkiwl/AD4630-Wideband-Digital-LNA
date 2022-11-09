@@ -13,6 +13,8 @@
 - Evaluating noise performance
 - Implementing optical isolation and battery power
 - Input analog circuitry to accomodate differential output and AC coupled input
+### Data:
+- Front end Falstad simulation: https://tinyurl.com/2ahfb8re
 ### Resources:
 - https://github.com/macaba/ad4630-pico-breakout
 - https://github.com/macaba/Nuts/blob/main/images/NSD.png
