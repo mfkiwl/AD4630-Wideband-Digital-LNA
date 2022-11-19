@@ -1,4 +1,4 @@
-19802376439118203
+19804045254317573
 AD4630
 AD4630-24BBCZ
 
@@ -56713,6 +56713,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LTC6655
+LTC6655BHLS8-5-PBF
+
+
+0
+8
+8
 MCU_RaspberryPi_and_Boards
 Crystal_SMD_HC49-US
 SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, 11.4x4.7mm^2 package
