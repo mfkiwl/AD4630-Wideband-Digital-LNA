@@ -8,6 +8,7 @@
 - Ultralow 1/f corner front end with AC and DC paths for noise and nanovolt measurements (TBD)
 - Optically isolated digital and analog sections
 - Battery powered (front end at least, digital section USB powered)
+ - testing
 ### Challenges: 
 - Sample storage and processing
 - Evaluating noise performance
