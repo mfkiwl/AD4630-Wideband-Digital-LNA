@@ -6,9 +6,8 @@
 ### Project goals:
 - Wideband sampling and digitally filtering samples to desired bandwidth
 - Ultralow 1/f corner front end with AC and DC paths for noise and nanovolt measurements (TBD)
-- Optically isolated digital and analog sections
-- Battery powered (front end at least, digital section USB powered)
- - testing
+- Optically isolated digital and analog sections: This is achieved easiest using a separate controller for front-end side, and using something like a UART isolator and a UART-USB bridge on the other side. 
+- Battery powered (front end at least, digital section USB powered): This one might be a bit challenging, for example, what kind of batteries will be used? What voltages to power the front end with? Single ended or bipolar?
 ### Challenges: 
 - Sample storage and processing
 - Evaluating noise performance
