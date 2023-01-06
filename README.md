@@ -17,7 +17,7 @@
 - Front end Falstad simulation: https://tinyurl.com/2ahfb8re
 ### Timeline:
 1. Prototype AD4630 "breakout" board to test soldering and get used to the IC itself, try different SPI settings.
-![Prototype PCB layout](https://github.com/NNNIIndia/AD4630-Wideband-Digital-LNA/blob/main/resources/front.png)
+![Prototype PCB layout](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/resources/front.PNG)
 2. Prototype entire system on [prototyping platform](https://github.com/macaba?tab=repositories).
 3. Fully integrated PCB.
 ### Resources:
