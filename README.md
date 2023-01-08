@@ -17,11 +17,16 @@
 ## List of Files
 - Hardware: KiCAD PCB files
 ![Prototype PCB layout](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/resources/front.PNG)
+## Application Examples
+[under construction]
+- The LNA outputs raw samples that can be stored in a .csv file and interpreted by an [NSD](https://github.com/macaba/NSD) program. 
 ## Notes
 - AD4630 is pin-compatible with the AD4030, which opens up some interesting possibilities in the future.
 ### Choice of Parts:
 - AD4630 2Msps 24-bit ADC: 6.5-digit capable, fast sampling, internal filtering
 - ADA4528 auto-zero op-amp: Lowest measured 1/f corner frequency
 ## Links
+- https://github.com/macaba/NSD
 - https://github.com/macaba/ad4630-pico-breakout
 - https://github.com/macaba/Nuts/blob/main/images/NSD.png
+- https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf
