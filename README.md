@@ -1,7 +1,8 @@
 # AD4630 Wideband Digital LNA
 ## Introduction
-[under construction]
+Output noise is an important metric when it comes to evaluating the performance of precision voltage references (temperature coefficient and stability being others). Of particular interest is the frequency band between 0.1Hz and 10Hz. Most long-scale integrating ADCs feature measurement periods that lie in this band, so the internal reference should ideally have noise lower than measurement resolution over this time period. To measure noise in this band, an amplifier, itself having low noise, is needed. Appropriate filtering is also desired to keep out excess noise (of other frequencies) from contaminating the band of interest. 
 ## Project Motivation
+This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/@reps), which was in turn based on an idea [Mark](https://github.com/macaba) had told him about - a digital sampler that would send raw samples to a computer program that would filter to the required bandwidth digitally. Given the 2Msps sample rate of the AD4630, the upper frequency limit could be expanded to several kilohertz. The addition of a chopper preamp would also greatly reduce input noise. DC-coupling the input and adding a few preamps in parallel would also make a crude nanovoltmeter. This project is intended mainly to explore the AD4630 itself, and evaluate possible front end circuits.
 ### Goals:
 - Wideband sampling and digitally filtering samples to desired bandwidth
 - Ultralow 1/f corner front end with AC and DC paths for noise and nanovolt measurements (TBD)
