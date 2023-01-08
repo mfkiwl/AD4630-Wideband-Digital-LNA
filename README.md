@@ -24,7 +24,9 @@
 [under construction]
 - The LNA outputs raw samples that can be stored in a .csv file and interpreted by an [NSD](https://github.com/macaba/NSD) program. 
 ## Notes
-- AD4630 is pin-compatible with the AD4030, which opens up some interesting possibilities in the future.
+- The AD4630 is pin-compatible with the AD4030, which opens up some interesting possibilities in the future.
+- The AD4630 has a somewhat limited reference voltage range - 4.096V to 5V. Since it cannot directly handle negative input voltages, the input signal is required to be centered around 2.5V. This turned out to be much more difficult than expected, so I might just go with a fully differential amplifier (e.g. LT6362) between the preamp (chopper) and the ADC.
+- Whether a minimum input frequency below 0.1Hz is useful or practical remains to be decided. 
 ### Choice of Parts:
 - AD4630 2Msps 24-bit ADC: 6.5-digit capable, fast sampling, internal filtering
 - ADA4528 auto-zero op-amp: Lowest measured 1/f corner frequency
