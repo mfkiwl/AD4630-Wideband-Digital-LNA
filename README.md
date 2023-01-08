@@ -19,6 +19,7 @@
 ![Prototype PCB layout](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/resources/front.PNG)
 - Software: [under construction]
   - Simulation: LTspice .asc file.
+- Resources: Infographics.
 ## Application Examples
 [under construction]
 - The LNA outputs raw samples that can be stored in a .csv file and interpreted by an [NSD](https://github.com/macaba/NSD) program. 
