@@ -36,3 +36,4 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - https://github.com/macaba/ad4630-pico-breakout
 - https://github.com/macaba/Nuts/blob/main/images/NSD.png
 - https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf
+- https://www.allaboutcircuits.com/technical-articles/Noise-Analysis-Using-LTspice-Tutorial/
