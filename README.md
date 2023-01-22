@@ -30,6 +30,7 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - Whether a minimum input frequency below 0.1Hz is useful or practical remains to be decided. 
 - Noise analysis with x10000 gain and a fully-differential op-amp on the output to make interfacing to the ADC easier:
 ![Infographic](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/Resources/noise10001.png)
+- After a few rounds of thinking, it was decided that having a minimum frequency of 0.1Hz (to facilitate a practical high-pass filter) would waste the ADA4528's spectacular 1/f performance, and a high gain would reduce usable bandwidth to a few hundred Hertz. One solution would be to have a low-value attenuator (1/5, 1/10) to reduce the input voltage range for direct sampling using the AD4630, although this would nullify most of the 1/f benefits. To achieve a wide amplification range, a composite amplifier would also be necessary. Schematic remains to be decided.
 ### Choice of Parts:
 - AD4630 2Msps 24-bit ADC: 6.5-digit capable, fast sampling, internal filtering
 - ADA4528 auto-zero op-amp: Lowest measured 1/f corner frequency
