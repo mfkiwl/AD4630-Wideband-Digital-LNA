@@ -9,12 +9,13 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - Optically isolated digital and analog sections: This is achieved easiest using a separate controller for front-end side, and using something like a UART isolator and a UART-USB bridge on the other side. 
 - Battery powered (front end at least, digital section USB powered): This one might be a bit challenging, for example, what kind of batteries will be used? What voltages to power the front end with? Single ended or bipolar?
 ### Challenges: 
-- Sample storage and processing
 - Evaluating noise performance
 - Implementing optical isolation and battery power
-- Input analog circuitry to accomodate differential output and AC coupled input
 ## Usage
-[under construction]
+### Specifications:
+- 10mHz to 10kHz input bandwidth    [calculated]
+- x200000 (106dB)                   [calculated]
+- ~3.5nV/rtHz noise floor (full BW) [calculated]
 ## List of Files
 - Hardware: KiCAD PCB files.
 ![Prototype PCB layout](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/resources/front.PNG)
@@ -26,19 +27,12 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - The LNA outputs raw samples that can be stored in a .csv file and interpreted by an [NSD](https://github.com/macaba/NSD) program. 
 ## Notes
 - The AD4630 is pin-compatible with the AD4030, which opens up some interesting possibilities in the future.
-- The AD4630 has a somewhat limited reference voltage range - 4.096V to 5V. Since it cannot directly handle negative input voltages, the input signal is required to be centered around 2.5V. This turned out to be much more difficult than expected, so I might just go with a fully differential amplifier (e.g. LT6362) between the preamp (chopper) and the ADC.
-- Whether a minimum input frequency below 0.1Hz is useful or practical remains to be decided. 
-- Noise analysis with x10000 gain and a fully-differential op-amp on the output to make interfacing to the ADC easier:
-![Infographic](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/Resources/noise10001.png)
-- After a few rounds of thinking, it was decided that having a minimum frequency of 0.1Hz (to facilitate a practical high-pass filter) would waste the ADA4528's spectacular 1/f performance, and a high gain would reduce usable bandwidth to a few hundred Hertz. One solution would be to have a low-value attenuator (1/5, 1/10) to reduce the input voltage range for direct sampling using the AD4630, although this would nullify most of the 1/f benefits. To achieve a wide amplification range, a composite amplifier would also be necessary. Schematic remains to be decided.
-- A Sallen-Key high-pass filter with a cutoff frequency of 0.01Hz requires component values that are more or less practical (16K, 1mF), and adding a gain stage in front of the filter also seems feasible.
-![Infographic](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/Resources/filterandgain.png)
-### Choice of Parts:
-- AD4630 2Msps 24-bit ADC: 6.5-digit capable, fast sampling, internal filtering
-- ADA4528 auto-zero op-amp: Lowest measured 1/f corner frequency
+- The input stage consists of a Sallen-Key filter that filters out frequencies below 10mHz while providing a gain of 330. It is possible to have gain and filtering in the same stage because of the low Thevenin resistance of the amplifier feedback resistors. The input filter/gain stage is followed by another x330 gain stage, which in turn is followed by a fully-differential amplifier to convert the input swing to a differntial swing for the ADC. It should theoretically be possible to cancel reference noise by setting fully differential amplifier common mode voltage to 1/2\*Vref as well as referencing one of the ADC differential inputs to 1/2\*Vref. Overall gain is 100000.
 ## Links
 - https://github.com/macaba/NSD
 - https://github.com/macaba/ad4630-pico-breakout
 - https://github.com/macaba/Nuts/blob/main/images/NSD.png
 - https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf
+- https://www.analog.com/media/en/technical-documentation/data-sheets/ada4528-1_4528-2.pdf
 - https://www.allaboutcircuits.com/technical-articles/Noise-Analysis-Using-LTspice-Tutorial/
+- http://sim.okawa-denshi.jp/en/OPseikiHikeisan.htm
