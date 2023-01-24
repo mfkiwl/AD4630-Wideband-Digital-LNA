@@ -13,8 +13,9 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - Implementing optical isolation and battery power
 ## Usage
 ### Specifications:
-- 10mHz to 10kHz input bandwidth [calculated]
-- 50uVpp max. input [calculated]
+- 10mHz to 10kHz input bandwidth    [calculated]
+- x200000 (106dB)                   [calculated]
+- ~3.5nV/rtHz noise floor (full BW) [calculated]
 ## List of Files
 - Hardware: KiCAD PCB files.
 ![Prototype PCB layout](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/resources/front.PNG)
