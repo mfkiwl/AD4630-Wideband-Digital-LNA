@@ -27,12 +27,11 @@ This idea was originally proposed to me by [Marco Reps](https://www.youtube.com/
 - The LNA outputs raw samples that can be stored in a .csv file and interpreted by an [NSD](https://github.com/macaba/NSD) program. 
 ## Notes
 - The AD4630 is pin-compatible with the AD4030, which opens up some interesting possibilities in the future.
-- The input stage consists of a Sallen-Key filter that filters out frequencies below 10mHz while providing a gain of 330. It is possible to have gain and filtering in the same stage because of the low Thevenin resistance of the amplifier feedback resistors. The input filter/gain stage is followed by another x330 gain stage, which in turn is followed by a fully-differential amplifier to convert the input swing to a differntial swing for the ADC. It should theoretically be possible to cancel reference noise by setting fully differential amplifier common mode voltage to 1/2\*Vref as well as referencing one of the ADC differential inputs to 1/2\*Vref. Overall gain is 100000.
+- The input stage consists of a Sallen-Key filter that filters out frequencies below 10mHz while providing a gain of 330. It is possible to have gain and filtering in the same stage because of the low Thevenin resistance of the amplifier feedback resistors. The input filter/gain stage is followed by another x330 gain stage, which in turn is followed by a fully-differential amplifier (x2) to convert the input swing to a differntial swing for the ADC. It should theoretically be possible to cancel reference noise by setting fully differential amplifier common mode voltage to 1/2\*Vref as well as referencing one of the ADC differential inputs to 1/2\*Vref. Overall gain is 200000.
+![Infographic](https://github.com/NNNILabs/AD4630-Wideband-Digital-LNA/blob/main/Resources/front%20end.PNG)
 ## Links
-- https://github.com/macaba/NSD
-- https://github.com/macaba/ad4630-pico-breakout
-- https://github.com/macaba/Nuts/blob/main/images/NSD.png
 - https://www.analog.com/media/en/technical-documentation/data-sheets/ad4630-24_ad4632-24.pdf
 - https://www.analog.com/media/en/technical-documentation/data-sheets/ada4528-1_4528-2.pdf
-- https://www.allaboutcircuits.com/technical-articles/Noise-Analysis-Using-LTspice-Tutorial/
+- https://www.analog.com/media/en/technical-documentation/data-sheets/6362fa.pdf
 - http://sim.okawa-denshi.jp/en/OPseikiHikeisan.htm
+- http://www.dicks-website.eu/low_noise_amp_part1/part1.html
