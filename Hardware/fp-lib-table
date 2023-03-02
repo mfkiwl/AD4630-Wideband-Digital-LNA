@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name "AD4630")(type "KiCad")(uri "${KIPRJMOD}/AD4630-24BBCZ/AD4630.pretty")(options "")(descr ""))
   (lib (name "LTC6655")(type "KiCad")(uri "${KIPRJMOD}/LTC6655/LTC6655.pretty")(options "")(descr ""))
+  (lib (name "Keebio-Parts")(type "KiCad")(uri "C:/Users/vivek/Desktop/Projects/Libraries/Keebio-Parts.pretty")(options "")(descr ""))
 )

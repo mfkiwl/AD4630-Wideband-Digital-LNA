@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name "LTC6655")(type "KiCad")(uri "${KIPRJMOD}/LTC6655/LTC6655.kicad_sym")(options "")(descr ""))
   (lib (name "AD4630")(type "KiCad")(uri "${KIPRJMOD}/AD4630-24BBCZ/AD4630.kicad_sym")(options "")(descr ""))
+  (lib (name "keebio")(type "KiCad")(uri "C:/Users/vivek/Desktop/Projects/Libraries/keebio-components/keebio.kicad_sym")(options "")(descr ""))
 )
